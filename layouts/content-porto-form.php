@@ -44,7 +44,7 @@ error_reporting(0);
     </div>
     <div class="form-group">
         <input type="submit" name="<?php echo $actbtn; ?>" class="btn btn-info" value="<?php echo $actval; ?>">
-        <input type="submit" class="btn btn-secondary" value="Reset Data">
+        <input type="button" class="btn btn-secondary" onclick="location.reload()" value="Reset Data">
         <input type="button" class="btn btn-secondary" onclick="location.href='polio.php'" value="Back">
     </div>
 </form>

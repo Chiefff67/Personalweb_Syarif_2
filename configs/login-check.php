@@ -17,7 +17,7 @@ if ($rowcount) {
     $_SESSION['P'] = $rowcount->password;
     header("location:../pages/home.php");
 }else{
-    header("location:../pages/login.php");
+    header("location:../pages/login.php?pesan=gagal");
 }
 
 // $rowcount = mysqli_num_rows($sql);// menghitung jumlah record tabel

@@ -5,9 +5,9 @@ include("../configs/connection.php");
 $id = $_GET['id'];
 $idUser = $_GET['sessionId'];
 
-echo '<pre>';
-print_r(isset($_SESSION));
-echo '</pre>';
+// echo '<pre>';
+// print_r(isset($_SESSION));
+// echo '</pre>';
 
 if ($id === $idUser) {
      header("Location: ../pages/user.php?pesan=gagal");

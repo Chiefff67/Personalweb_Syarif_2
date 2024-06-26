@@ -11,10 +11,11 @@ if (!isset($_SESSION['U']) and (!isset($_SESSION['P']))) {
 include("../configs/connection.php");
 $sql = mysqli_query($connect, "select * from user");
 
+//mengecek apakah akun yang dihapus sedang login
 if (isset($_GET['pesan'])) {
 ?>
     <div class="alert alert-warning" role="alert">
-        Tidak Bisa Menghapus Akun Yang Sedang Digunakan!
+        Tidak Bisa Menghapus Akun Yang Sedang Login!
     </div>
     <?php
 }
@@ -54,10 +55,6 @@ if (isset($_GET['pesan'])) {
 </table>
 
 <script>
-    function alert() {
-        alert("Anda yakin data ini akan dihapus?")
-    }
-
     function KonfirmasiHapus() {
         if (confirm("Anda yakin data ini akan dihapus?"))
             return true;
