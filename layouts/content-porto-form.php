@@ -24,8 +24,8 @@ error_reporting(0);
 <!-- form poertopolio -->
 <form name="portform" method="post" action="" onsubmit="return validasi()">
     <div class="form-group" <?php echo $idport; ?>>
-        <label for="portID">portfolio ID</label>
-        <input type="text" class="form-control" name="port" id="portID" value="<?php echo $data['id_port']; ?>" <?php echo $idport; ?>>
+        <!-- <label for="portID">portfolio ID</label> -->
+        <input type="hidden" class="form-control" name="port" id="portID" value="<?php echo $data['id_port']; ?>" <?php echo $idport; ?>>
     </div>
     <div class="form-group">
         <label for="projID">Project Name</label>
@@ -102,12 +102,12 @@ if (isset($_POST['addport'])) {
         let isValid = true;
         if (proj === "" || proj.length > 50) {
             projError.textContent =
-                "Masukan nama proyek tidak lebih dari 50 karakter";
+                "Nama proyek terlalu panjang";
             isValid = false;
         }
         if (year === "" || year.length > 4) {
             yearError.textContent =
-                "Masukan tahun proyek tidak lebih dari 4 karakter";
+                "Tahun tidak masuk akal";
             isValid = false;
         }
         if (desc === "") {

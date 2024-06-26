@@ -17,19 +17,7 @@ if ($rowcount) {
     $_SESSION['P'] = $rowcount->password;
     header("location:../pages/home.php");
 }else{
+    
     header("location:../pages/login.php");
 }
-
-// $rowcount = mysqli_num_rows($sql);// menghitung jumlah record tabel
-
-// if ($rowcount !=0) {
-//     session_start();
-//     $_SESSION['U'] = $usr;
-//     $_SESSION['P'] = $pss;
-
-
-//     header("location:../pages/home.php");
-// }else{
-//     header("location:../pages/login.php");
-// }
 ?>
