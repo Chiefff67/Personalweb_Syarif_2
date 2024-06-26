@@ -37,7 +37,6 @@
 
                         $sql = mysqli_query($connect, "select * from user where username = '$usr'");
                         $data = mysqli_fetch_array($sql);
-                        // echo '<a class="nav-link" href="#"> |&nbsp; Halo,</>' . $_SESSION['U'];
 
                         echo '<a class="nav-link" href="../pages/user.php">User Management</a>';
                         echo '<a class="nav-link" href="#"> |&nbsp; Halo,</>' .$data['name'];
