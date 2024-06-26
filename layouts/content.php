@@ -18,7 +18,7 @@
                 include("content-contact.php");
             } elseif ($pageinfo == "Portfolio Form") {
                 include("content-porto-form.php");
-            } elseif ($pageinfo == "login") {
+            } elseif ($pageinfo == "Login") {
                 include("content-login.php");
             }
             ?>

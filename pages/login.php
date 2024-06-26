@@ -1,5 +1,5 @@
 <?php
-$pageinfo = "login";
+$pageinfo = "Login";
 $description = "Ini halaman login ";
 
 include("../layouts/head.php");

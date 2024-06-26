@@ -43,7 +43,7 @@ $total_pages = ceil($total_records / $limit);
 
 // Fetch records for current page
 $sql = mysqli_query($connect, "SELECT name, biography, photo FROM user JOIN biography ON user.id_user = biography.id_user LIMIT $start_from, $limit");
-
+if (!isset($_SESSION['I'])) {
 ?>
 
 <table class="table table-striped" <?php echo $table_status ?>>
@@ -74,6 +74,7 @@ $sql = mysqli_query($connect, "SELECT name, biography, photo FROM user JOIN biog
     ?>
 </table>
 
+
 <!-- Pagination Links -->
 <nav aria-label="Page navigation example">
   <ul class="pagination">
@@ -90,7 +91,9 @@ $sql = mysqli_query($connect, "SELECT name, biography, photo FROM user JOIN biog
     <?php } ?>
   </ul>
 </nav>
-
+<?php 
+}
+?>
 <button class="btn btn-info" <?php echo $btn_status; ?> onclick="location.href='bio-form.php?id=<?php echo $biodat['id_bio']; ?>'">Edit Data</button>
 
 <?php echo $hr; ?>
