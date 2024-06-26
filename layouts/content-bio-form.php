@@ -16,9 +16,9 @@ $data = mysqli_fetch_array($sql);
 <!-- biography form -->
 <form name="bioform" method="post" enctype="multipart/form-data" action="" onsubmit="return validasi()">
     <div class=" form-group">
-    <label for="bioID">Biography Edit Form</label>
-    <textarea class="form-control" name="bio" id="bioID" rows="10"><?php echo $data['biography']; ?></textarea>
-    <span id="bio-error" class="error-message"></span>
+        <label for="bioID">Biography Edit Form</label>
+        <textarea class="form-control" name="bio" id="bioID" rows="10"><?php echo $data['biography']; ?></textarea>
+        <span id="bio-error" class="error-message"></span>
     </div>
     <div class="form-group">
         <label for="fotoID">Foto Profil</label>

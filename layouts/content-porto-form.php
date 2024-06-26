@@ -52,7 +52,7 @@ error_reporting(0);
 
 
 
-<!-- jika submit diklik -->
+<!-- submit -->
 <?php
 
 if (isset($_POST['addport'])) {
@@ -63,7 +63,7 @@ if (isset($_POST['addport'])) {
     $sql = "insert into portfolio (project_name, year, description) values ('$proj','$year','$desc')";
     $simpan = mysqli_query($connect, $sql);
 
-    //bila berhasil simpan kembali ke halaman poertfolio
+    //return
     if ($simpan) {
         header("location:../pages/polio.php");
     } else {
@@ -77,7 +77,7 @@ if (isset($_POST['addport'])) {
     $sql = "update portfolio set project_name = '$proj', year ='$year', description = '$desc' where id_port = '$id'";
     $update = mysqli_query($connect, $sql);
 
-    //bila berhasil update kembali ke halaman poertfolio
+    //return
     if ($update) {
         header("location:../pages/polio.php");
     } else {

@@ -4,7 +4,7 @@ if (!isset($_SESSION['U']) and (!isset($_SESSION['P']))) {
 }
 include("../configs/connection.php");
 error_reporting(0);
-$id = $_GET['id']; // mengambil id dri url
+$id = $_GET['id'];
 
 $sql = mysqli_query($connect, "select * from user where id_user = '$id'");
 $data = mysqli_fetch_array($sql);
@@ -22,10 +22,9 @@ if ($id == "") {
 error_reporting(0);
 ?>
 
-<!-- form poertopolio -->
+<!-- form portfolio -->
 <form name="userform" method="post" action="" onsubmit="return validasi()">
     <div class="form-group" <?php echo $iduser; ?>>
-        <!-- <label for="userID">User ID</label> -->
         <input type="hidden" class="form-control" name="user" id="userID" value="<?php echo $data['id_user']; ?>" <?php echo $iduser; ?>>
     </div>
     <div class="form-group">
@@ -52,7 +51,7 @@ error_reporting(0);
 <!-- end form portfolio -->
 
 
-<!-- jika submit diklik -->
+<!-- submit -->
 <?php
 
 if (isset($_POST['adduser'])) {
@@ -63,7 +62,7 @@ if (isset($_POST['adduser'])) {
     $sql = "insert into user (name, username, password) values ('$name','$username','$password')";
     $simpan = mysqli_query($connect, $sql);
 
-    //bila berhasil simpan kembali ke halaman poertfolio
+
     if ($simpan) {
         header("location:../pages/user.php");
     } else {
@@ -77,7 +76,7 @@ if (isset($_POST['adduser'])) {
     $sql = "update user set name = '$name', username ='$username', password = '$password' where id_user = '$id'";
     $update = mysqli_query($connect, $sql);
 
-    //bila berhasil update kembali ke halaman poertfolio
+
     if ($update) {
         header("location:../pages/user.php");
     } else {

@@ -7,9 +7,9 @@
 
     <div class="form-group">
         <label for="passID">Password</label>
-        <input type="password" class="form-control" name="pass"id="passID" placeholder="type password here">
+        <input type="password" class="form-control" name="pass" id="passID" placeholder="type password here">
     </div>
-    
+
     <div class="form-group">
         <input type="submit" class="btn btn-info" value="login">
     </div>

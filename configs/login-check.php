@@ -1,7 +1,7 @@
 <?php
 include("connection.php");
-$usr = $_POST['user']; // mengambil inputan dari form bername user
-$pss = md5($_POST['pass']); // mengambil inputan dari form bername pass
+$usr = $_POST['user'];
+$pss = md5($_POST['pass']);
 
 $sql = mysqli_query($connect, "select * from user where username = '$usr' and password ='$pss'");
 
@@ -25,6 +25,4 @@ if ($rowcount) {
     }
     loginFailed();
 </script>";
-   
 }
-?>

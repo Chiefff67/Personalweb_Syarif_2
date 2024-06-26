@@ -9,21 +9,21 @@ if (!isset($_SESSION['U']) and (!isset($_SESSION['P']))) {
 include("../configs/connection.php");
 
 // Pagination settings
-$limit = 3; // Number of entries to show in a page.
+$limit = 3;
 if (isset($_GET["page"])) {
-    $page  = $_GET["page"]; 
+    $page  = $_GET["page"];
 } else {
-    $page = 1; 
+    $page = 1;
 };
-$start_from = ($page-1) * $limit;
+$start_from = ($page - 1) * $limit;
 
-// Fetch total records
+
 $result = mysqli_query($connect, "SELECT COUNT(id_user) FROM user");
 $row = mysqli_fetch_row($result);
 $total_records = $row[0];
 $total_pages = ceil($total_records / $limit);
 
-// Fetch records for current page
+
 $sql = mysqli_query($connect, "SELECT * FROM user LIMIT $start_from, $limit");
 
 if (isset($_GET['pesan'])) {
@@ -31,7 +31,7 @@ if (isset($_GET['pesan'])) {
     <div class="alert alert-warning" role="alert">
         Tidak Bisa Menghapus Akun Yang Sedang Digunakan!
     </div>
-    <?php
+<?php
 }
 ?>
 
@@ -63,27 +63,27 @@ if (isset($_GET['pesan'])) {
                 </td>
             </tr>
         </tbody>
-    <?php 
+    <?php
         $nomor++;
-    } 
+    }
     ?>
 </table>
 
 <!-- Pagination Links -->
 <nav aria-label="Page navigation example">
-  <ul class="pagination">
-    <?php if($page > 1){ ?>
-      <li class="page-item"><a class="page-link" href="?page=<?php echo ($page-1); ?>">Previous</a></li>
-    <?php } ?>
-    
-    <?php for ($i=1; $i<=$total_pages; $i++) { ?>
-      <li class="page-item <?php if($page == $i) echo 'active'; ?>"><a class="page-link" href="?page=<?php echo $i; ?>"><?php echo $i; ?></a></li>
-    <?php } ?>
-    
-    <?php if($page < $total_pages){ ?>
-      <li class="page-item"><a class="page-link" href="?page=<?php echo ($page+1); ?>">Next</a></li>
-    <?php } ?>
-  </ul>
+    <ul class="pagination">
+        <?php if ($page > 1) { ?>
+            <li class="page-item"><a class="page-link" href="?page=<?php echo ($page - 1); ?>">Previous</a></li>
+        <?php } ?>
+
+        <?php for ($i = 1; $i <= $total_pages; $i++) { ?>
+            <li class="page-item <?php if ($page == $i) echo 'active'; ?>"><a class="page-link" href="?page=<?php echo $i; ?>"><?php echo $i; ?></a></li>
+        <?php } ?>
+
+        <?php if ($page < $total_pages) { ?>
+            <li class="page-item"><a class="page-link" href="?page=<?php echo ($page + 1); ?>">Next</a></li>
+        <?php } ?>
+    </ul>
 </nav>
 
 <script>

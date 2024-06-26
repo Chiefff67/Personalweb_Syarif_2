@@ -1,8 +1,7 @@
-<?php 
-    session_start();
+<?php
+session_start();
 
-    unset($_SESSION);//mengosongkan variabel
-    session_destroy();//menghilangkan variabel
+unset($_SESSION); //mengosongkan variabel
+session_destroy(); //menghilangkan variabel
 
-    header("location:login.php");
-?>
+header("location:login.php");

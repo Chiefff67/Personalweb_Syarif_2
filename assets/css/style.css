@@ -46,9 +46,9 @@
 .bold-black-link {
     color: black;
     font-weight: semi-bold;
-    text-decoration: none; /* Optional: remove underline from links */
+    text-decoration: none;
 }
 
 .bold-black-link:hover {
-    color: black; /* Ensure color remains black on hover */
+    color: black; 
 }
