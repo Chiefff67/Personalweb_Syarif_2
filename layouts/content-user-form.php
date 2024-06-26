@@ -40,12 +40,12 @@ error_reporting(0);
     </div>
     <div class="form-group">
         <label for="passID">Password</label>
-        <input type="password" class="form-control" name="password" id="passID" value="<?php echo $data['password']; ?>" placeholder="type password here">
+        <input type="password" class="form-control" name="password" id="passID"  placeholder="type password here">
         <span id="password-error" class="error-message"></span>
     </div>
     <div class="form-group">
         <input type="submit" name="<?php echo $actbtn; ?>" class="btn btn-info" value="<?php echo $actval; ?>">
-        <input type="submit" class="btn btn-secondary" value="Reset Data">
+        <input type="button" class="btn btn-secondary" onclick="location.reload()" value="Reset Data">
         <input type="button" class="btn btn-secondary" onclick="location.href='user.php'" value="Back">
     </div>
 </form>
