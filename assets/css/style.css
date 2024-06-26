@@ -45,7 +45,7 @@
 
 .bold-black-link {
     color: black;
-    font-weight: bold;
+    font-weight: semi-bold;
     text-decoration: none; /* Optional: remove underline from links */
 }
 
