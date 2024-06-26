@@ -1,7 +1,7 @@
 <?php
 
     $pageinfo = "Biography";
-    $description = "ini halaman biografi saya";
+    $description = "Halaman biografi";
     
     include("../layouts/head.php");
     include("../layouts/header.php");
