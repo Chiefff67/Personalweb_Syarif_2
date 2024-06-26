@@ -40,7 +40,7 @@ error_reporting(0);
     </div>
     <div class="form-group">
         <label for="passID">Password</label>
-        <input type="password" class="form-control" name="password" id="passID"  placeholder="type password here">
+        <input type="password" class="form-control" name="password" id="passID" placeholder="type password here">
         <span id="password-error" class="error-message"></span>
     </div>
     <div class="form-group">
@@ -102,12 +102,12 @@ if (isset($_POST['adduser'])) {
         let isValid = true;
         if (name === "" || name.length > 50) {
             nameError.textContent =
-                "Masukan nama tidak lebih dari 50 karakter";
+                "Nama terlalu panjang";
             isValid = false;
         }
         if (username === "" || username.length > 10) {
             usernameError.textContent =
-                "Masukan username tidak lebih dari 10 karakter";
+                "Username terlalu panjang";
             isValid = false;
         }
         if (password === "" || password.length < 8) {
