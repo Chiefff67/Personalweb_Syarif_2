@@ -1,6 +1,6 @@
 <?php
 $pageinfo = "login";
-$description = "ini halaman login ";
+$description = "Ini halaman login ";
 
 include("../layouts/head.php");
 include("../layouts/header.php");

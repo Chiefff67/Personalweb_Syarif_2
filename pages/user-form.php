@@ -1,7 +1,7 @@
 <?php
 
 $pageinfo = "User-form";
-$description = "form input User Management";
+$description = "Form input User Management";
 
 include("../layouts/head.php");
 include("../layouts/header.php");

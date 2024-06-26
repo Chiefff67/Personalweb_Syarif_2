@@ -1,7 +1,7 @@
 <?php
 
 $pageinfo = "User";
-$description = "ini halaman User Management saya";
+$description = "Halaman user management";
 
 include("../layouts/head.php");
 include("../layouts/header.php");
