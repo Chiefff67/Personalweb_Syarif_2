@@ -25,8 +25,8 @@ error_reporting(0);
 <!-- form poertopolio -->
 <form name="userform" method="post" action="" onsubmit="return validasi()">
     <div class="form-group" <?php echo $iduser; ?>>
-        <label for="userID">User ID</label>
-        <input type="text" class="form-control" name="user" id="userID" value="<?php echo $data['id_user']; ?>" <?php echo $iduser; ?>>
+        <!-- <label for="userID">User ID</label> -->
+        <input type="hidden" class="form-control" name="user" id="userID" value="<?php echo $data['id_user']; ?>" <?php echo $iduser; ?>>
     </div>
     <div class="form-group">
         <label for="nameID">Nama</label>
