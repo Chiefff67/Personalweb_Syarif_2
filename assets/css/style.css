@@ -42,3 +42,13 @@
     font-size: 14px; 
     margin-top: 5px;
 }
+
+.bold-black-link {
+    color: black;
+    font-weight: bold;
+    text-decoration: none; /* Optional: remove underline from links */
+}
+
+.bold-black-link:hover {
+    color: black; /* Ensure color remains black on hover */
+}
