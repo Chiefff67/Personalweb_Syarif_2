@@ -1,6 +1,6 @@
 <?php
 $pageinfo = "Portfolio";
-$description = "Ini halaman Portfolio";
+$description = "Halaman Portfolio";
 
 include("../layouts/head.php");
 include("../layouts/header.php");
